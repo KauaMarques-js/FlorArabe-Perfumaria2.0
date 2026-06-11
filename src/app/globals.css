@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Light Theme (default) ── */
+  --color-background: #FAF7F2;
+  --color-surface: #FFFFFF;
+  --color-surface-elevated: #FFFFFF;
+  --color-gold: #C9A45C;
+  --color-gold-hover: #B38B3D;
+  --color-text-primary: #1E1E1E;
+  --color-text-secondary: #6B6B6B;
+  --color-border: #E8E1D6;
+  --color-accent-subtle: #8C7852;
+
+  /* Typography */
+  --font-heading: var(--font-playfair-display);
+  --font-body: var(--font-inter);
+}
+
+/* ── Dark Theme — Perfumaria noturna premium ── */
+html.dark {
+  --color-background: #181613;
+  --color-surface: #211E1A;
+  --color-surface-elevated: #2A2621;
+  --color-gold: #D4B06A;
+  --color-gold-hover: #E0BE7E;
+  --color-text-primary: #F5F1EA;
+  --color-text-secondary: #B6ADA1;
+  --color-border: #3A342D;
+  --color-accent-subtle: #8C7852;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+}
+
+/* ── Global theme transition ── */
+*,
+*::before,
+*::after {
+  transition-property: background-color, border-color, color, fill, stroke, box-shadow;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+
+/* Exclude elements that need instant response or have their own transitions */
+a,
+button,
+input,
+textarea,
+img,
+video,
+[class*="transition-"] {
+  transition-property: revert;
+  transition-duration: revert;
+  transition-timing-function: revert;
+}
+
+/* ── Subtle gold decorative line ── */
+.gold-line {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-gold),
+    transparent
+  );
+}
+
+/* ── Product image hover zoom — CSS only ── */
+.product-image-wrapper {
+  overflow: hidden;
+}
+
+.product-image-wrapper img {
+  transition: transform 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.product-image-wrapper:hover img {
+  transform: scale(1.02);
+}

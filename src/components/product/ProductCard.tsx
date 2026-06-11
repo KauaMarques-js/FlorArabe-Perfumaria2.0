@@ -11,7 +11,7 @@ type ProductCardProps = {
 
 export default function ProductCard({ product, priority = false }: ProductCardProps) {
   return (
-    <article className="group bg-surface rounded-2xl overflow-hidden border border-border/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/5 hover:border-border/60">
+    <article className="group bg-surface rounded-2xl overflow-hidden border border-border/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-gold/5 hover:border-gold/20">
       <Link
         href={`/produtos/${product.id}`}
         className="block product-image-wrapper aspect-[3/4] relative bg-background"

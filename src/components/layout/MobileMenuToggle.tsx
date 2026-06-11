@@ -40,23 +40,28 @@ export default function MobileMenuToggle() {
         </div>
       </button>
 
-      {isOpen && (
-        <nav className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-t border-border transition-all duration-300">
-          <ul className="flex flex-col items-center py-6 gap-4">
-            {NAV_ITEMS.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  onClick={() => setIsOpen(false)}
-                  className="text-sm tracking-widest uppercase text-text-primary hover:text-gold transition-colors duration-200"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      )}
+      <nav
+        className={`md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-t border-border/50 transition-all duration-300 ease-in-out ${
+          isOpen
+            ? "opacity-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 -translate-y-2 pointer-events-none"
+        }`}
+        aria-hidden={!isOpen}
+      >
+        <ul className="flex flex-col items-center py-6 gap-4">
+          {NAV_ITEMS.map((item) => (
+            <li key={item.href}>
+              <Link
+                href={item.href}
+                onClick={() => setIsOpen(false)}
+                className="text-sm tracking-widest uppercase text-text-primary hover:text-gold transition-colors duration-200"
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </>
   );
 }

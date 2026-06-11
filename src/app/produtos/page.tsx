@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { products } from "@/data/products";
-import ProductGrid from "@/components/product/ProductGrid";
+import ProductCatalog from "@/components/product/ProductCatalog";
 
 export const metadata: Metadata = {
   title: "Catálogo | Flor Árabe Perfumaria",
@@ -21,7 +21,8 @@ export default function ProdutosPage() {
         <div className="gold-line max-w-24 mx-auto mt-4" />
       </div>
 
-      <ProductGrid products={products} />
+      <ProductCatalog products={products} />
     </section>
   );
 }
+

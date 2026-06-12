@@ -64,7 +64,7 @@ export default function HeroCarousel({ products }: HeroCarouselProps) {
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
-        className="relative w-full h-full overflow-hidden rounded-2xl bg-surface border border-border/30 p-4 flex items-center justify-center shadow-lg hover:shadow-xl hover:shadow-gold/10 transition-shadow duration-500"
+        className="relative w-full h-full overflow-hidden rounded-2xl bg-surface border border-border/30 flex items-center justify-center shadow-lg hover:shadow-xl hover:shadow-gold/10 transition-shadow duration-500"
       >
         {products.map((product, index) => {
           const isActive = index === currentIndex;
@@ -72,7 +72,7 @@ export default function HeroCarousel({ products }: HeroCarouselProps) {
             <Link
               key={product.id}
               href={`/produtos/${product.id}`}
-              className={`absolute inset-0 p-8 flex items-center justify-center transition-all duration-700 ease-in-out ${
+              className={`absolute inset-0 flex items-center justify-center transition-all duration-700 ease-in-out ${
                 isActive
                   ? "opacity-100 scale-100 translate-x-0 pointer-events-auto"
                   : "opacity-0 scale-95 translate-x-4 pointer-events-none"
@@ -83,7 +83,7 @@ export default function HeroCarousel({ products }: HeroCarouselProps) {
                 alt={product.name}
                 fill
                 sizes="(max-width: 768px) 288px, (max-width: 1024px) 320px, 384px"
-                className="object-contain p-4 hover:scale-105 transition-transform duration-500"
+                className="object-cover hover:scale-105 transition-transform duration-500"
                 priority={index === 0}
               />
             </Link>

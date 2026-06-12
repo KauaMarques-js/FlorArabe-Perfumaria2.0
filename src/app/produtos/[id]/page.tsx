@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { products } from "@/data/products";
 import { formatPrice } from "@/lib/format";
 import WhatsAppButton from "@/components/shared/WhatsAppButton";
+import ProductGallery from "@/components/product/ProductGallery";
 
 type ProductPageProps = {
   params: Promise<{ id: string }>;
@@ -75,17 +76,23 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
       {/* Product Detail */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start">
-        {/* Image */}
-        <div className="product-image-wrapper aspect-[3/4] relative rounded-2xl overflow-hidden bg-surface border border-border/30">
-          <Image
-            src={product.image}
-            alt={product.name}
-            fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover"
-            priority
-          />
-        </div>
+        {/* Image / Gallery */}
+        {product.images && product.images.length > 0 ? (
+          <ProductGallery images={product.images} alt={product.name} />
+        ) : (
+          <div className="product-image-wrapper aspect-[3/4] relative rounded-2xl overflow-hidden bg-surface border border-border/30">
+            <Image
+              src={product.image}
+              alt={product.name}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className={`${
+                product.image.includes("tabela") ? "object-contain p-4" : "object-cover"
+              }`}
+              priority
+            />
+          </div>
+        )}
 
         {/* Info */}
         <div className="space-y-8 md:py-8">
@@ -102,9 +109,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
           </div>
 
           {product.description && (
-            <p className="text-text-secondary leading-relaxed text-base">
+            <div className="text-text-secondary leading-relaxed text-base whitespace-pre-wrap">
               {product.description}
-            </p>
+            </div>
           )}
 
           <WhatsAppButton

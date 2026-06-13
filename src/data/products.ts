@@ -5,50 +5,54 @@ export const products: Product[] = [
   {
     id: "Mayar-lattafa",
     name: "Mayar Lattafa",
-    price: 199.90,
+    price: 219.90,
     image: "/images/products/mayar-lattafa-normal.jpg",
     images: ["/images/products/mayar-lattafa-normal.jpg", "/images/products/mayar-lattafa-normal-tabela.jpeg"],
     description:
-      `O perfume árabe feminino que conquista pela elegância e cremosidade.
+      `O perfume árabe feminino que conquista mulheres que amam fragrâncias sofisticadas, delicadas e extremamente elegantes.
 
-Delicado, sofisticado e envolvente, o Yara Moi é perfeito para quem busca uma fragrância feminina marcante, confortável e extremamente elegante.
+Moderno, feminino e envolvente, o Mayar é perfeito para quem busca um perfume marcante na medida certa, combinando frescor frutado, flores delicadas e um toque cremoso extremamente confortável.
 
-Sua combinação de flores brancas, baunilha cremosa, notas gourmand e musk cria um aroma aveludado, luxuoso e irresistivelmente feminino.
+Sua combinação de frutas vermelhas suculentas, notas florais sofisticadas, musk e acordes aveludados cria uma fragrância luminosa, elegante e extremamente agradável, perfeita para destacar sua feminilidade com sofisticação.
 
-É aquele perfume que transmite sofisticação sem esforço, recebe elogios e deixa uma impressão memorável por onde passa. ✨
+É aquele perfume que transmite delicadeza, luxo e deixa um rastro memorável por onde passa. ✨
 
 🌷 Família Olfativa
 
-Floral Gourmand Cremoso
+Floral Frutado
 
 ✨ Notas em destaque
 
-* Flores brancas delicadas
-* Baunilha cremosa
-* Caramelo suave
-* Musk aveludado
-* Acordes gourmand sofisticados
+Frutas vermelhas suculentas
+Lichia delicada
+Flores sofisticadas
+Musk confortável
+Acordes cremosos e elegantes
 
 💖 Ideal para
 
 ✔️ Uso diário
 ✔️ Trabalho
-✔️ Encontros especiais
-✔️ Passeios
-✔️ Mulheres que amam perfumes doces, elegantes e sofisticados
+✔️ Passeios e encontros especiais
+✔️ Mulheres que amam perfumes femininos sofisticados
+✔️ Quem busca fragrâncias modernas e muito elogiadas
 
 🛍️ Disponível em:
 
-🤍 Frasco Original 100ml
-✨ R$ 199,90
+🌸 Frasco Original 100ml
+💗 R$ 219,90
 
-🤍 Decant 10ml
-✨ R$ 34,90
+🌸 Decant 10ml
+✨ R$ 39,90
 
-🤍 Kit Descoberta
-✨ 3 Decants de 10ml por R$ 99,90
+🌸 Kit Descoberta
+✨ 3 Decants de 10ml por R$ 109,90
 
-Perfeito para conhecer a fragrância antes de investir no frasco completo ou experimentar diferentes perfumes da coleção.`,
+Perfeito para conhecer a fragrância antes de investir no frasco completo ou experimentar diferentes perfumes da coleção.
+🌸 Descubra por que o Mayar é um dos perfumes árabes femininos mais elegantes e desejados do momento.
+
+Flor Árabe Perfumaria
+Onde cada fragrância conta uma história. ✨`,
   },
   {
     id: "Mayar-Natural-Intense-Lattafa",

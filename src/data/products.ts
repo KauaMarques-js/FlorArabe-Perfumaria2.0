@@ -2,12 +2,56 @@ import { Product } from "@/types/product";
 
 export const products: Product[] = [
   {
-    id: "asad-lattafa",
-    name: "Asad Lattafa",
-    price: 189.90,
-    image: "/images/products/asad-lattafa.webp",
+    id: "Mayar-Natural-Intense-Lattafa",
+    name: "Mayar Lattafa Natural Intense",
+    price: 219.90,
+    image: "/images/products/mayar-lattafa.jpg",
+    images: ["/images/products/mayar-lattafa.jpg", "/images/products/mayar-lattafa-tabela.jpeg"],
     description:
-      "Uma fragrância masculina poderosa e sofisticada, com notas de tabaco, baunilha e âmbar que criam uma presença marcante e inesquecível.",
+      `O perfume árabe feminino que conquista mulheres que amam fragrâncias refrescantes, sofisticadas e naturalmente elegantes.
+
+Moderno, vibrante e extremamente envolvente, o Mayar Natural Intense é perfeito para quem busca um perfume marcante com sensação de frescor luxuoso, combinando frutas exóticas, acordes aquáticos e flores delicadas em uma fragrância única e viciante.
+
+Sua combinação refrescante de frutas tropicais, notas cítricas luminosas, coco cremoso, flores brancas e musk suave cria uma assinatura leve, sofisticada e extremamente agradável, perfeita para mulheres que gostam de perfumes elegantes e cheios de personalidade.
+
+É aquele perfume que transmite liberdade, frescor e sofisticação, deixando uma sensação limpa e marcante por onde passa. ✨
+
+🌊 Família Olfativa
+
+Floral Aquático Frutado
+
+✨ Notas em destaque
+
+* Frutas tropicais refrescantes
+* Limão e acordes cítricos vibrantes
+* Coco cremoso sofisticado
+* Flores brancas delicadas
+* Musk limpo e confortável
+
+💖 Ideal para
+
+✔️ Uso diário
+✔️ Dias quentes e clima tropical
+✔️ Praia, viagens e momentos especiais
+✔️ Mulheres que amam perfumes frescos e sofisticados
+✔️ Quem busca fragrâncias elegantes e extremamente elogiadas
+
+🛍️ Disponível em:
+
+🌿 Frasco Original 100ml
+💚 R$ 219,90
+
+🌿 Decant 10ml
+✨ R$ 39,90
+
+🌿 Kit Descoberta
+✨ 3 Decants de 10ml por R$ 109,90
+
+Perfeito para conhecer a fragrância antes de investir no frasco completo ou experimentar diferentes perfumes da coleção.
+🌿 Descubra por que o Mayar Natural Intense Lattafa se tornou um dos perfumes árabes mais desejados por mulheres que amam frescor, elegância e sofisticação.
+
+Flor Árabe Perfumaria
+Onde cada fragrância conta uma história. ✨`,
   },
   {
     id: "yara-lattafa",
@@ -99,14 +143,6 @@ Perfeito para conhecer a fragrância antes de investir no frasco completo ou exp
 `,
   },
   {
-    id: "bade-al-oud-amethyst",
-    name: "Bade'e Al Oud Amethyst",
-    price: 219.90,
-    image: "/images/products/bade-al-oud-amethyst.webp",
-    description:
-      "Luxuoso e misterioso, este perfume combina oud autêntico com notas florais e almíscar, criando uma experiência olfativa única.",
-  },
-  {
     id: "yara-lattafa-moi",
     name: "Yara Lattafa Moi",
     price: 199.90,
@@ -154,12 +190,5 @@ Floral Gourmand Cremoso
 
 Perfeito para conhecer a fragrância antes de investir no frasco completo ou experimentar diferentes perfumes da coleção.`,
   },
-  {
-    id: "raghba-lattafa",
-    name: "Raghba Lattafa",
-    price: 159.90,
-    image: "/images/products/raghba-lattafa.webp",
-    description:
-      "Um perfume gourmand irresistível com notas de baunilha, caramelo e pralinê, perfeito para quem aprecia fragrâncias doces e acolhedoras.",
-  },
+ 
 ];

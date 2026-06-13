@@ -39,7 +39,7 @@ const CONTACT_CHANNELS = [
 
 export default function ContatoPage() {
   return (
-    <section className="max-w-[720px] mx-auto px-6 py-16 md:py-24">
+    <section className="max-w-[720px] mx-auto px-6 py-16 md:py-24 fade-in fade-delay-1">
       <div className="text-center mb-14 space-y-3">
         <h1 className="font-heading text-3xl md:text-4xl text-text-primary">
           Fale Conosco
@@ -51,13 +51,13 @@ export default function ContatoPage() {
       </div>
 
       <div className="space-y-6">
-        {CONTACT_CHANNELS.map((channel) => (
+        {CONTACT_CHANNELS.map((channel, idx) => (
           <Link
             key={channel.label}
             href={channel.href}
             target={channel.external ? "_blank" : undefined}
             rel={channel.external ? "noopener noreferrer" : undefined}
-            className="group flex items-center gap-6 p-6 bg-surface rounded-2xl border border-border/30 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:shadow-black/5 hover:border-border/60"
+            className={`group flex items-center gap-6 p-6 bg-surface rounded-2xl border border-border/30 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:shadow-black/5 hover:border-border/60 fade-in fade-delay-${Math.min(4, idx + 1)}`}
           >
             <div className="text-gold shrink-0">{channel.icon}</div>
 

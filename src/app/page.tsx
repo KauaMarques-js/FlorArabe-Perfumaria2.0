@@ -52,7 +52,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="max-w-[1280px] mx-auto px-6 pt-10 pb-20 md:pt-16 md:pb-32">
+      <section className="max-w-[1280px] mx-auto px-6 pt-10 pb-20 md:pt-16 md:pb-32 fade-in fade-delay-1">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Left — Text */}
           <div className="space-y-8 text-center md:text-left order-2 md:order-1">
@@ -95,10 +95,10 @@ export default function HomePage() {
       </section>
 
       {/* Gold decorative line */}
-      <div className="gold-line max-w-xs mx-auto" />
+      <div className="gold-line max-w-xs mx-auto fade-in fade-delay-2" />
 
       {/* Benefits Section */}
-      <section className="max-w-[1280px] mx-auto px-6 py-20 md:py-24">
+      <section className="max-w-[1280px] mx-auto px-6 py-20 md:py-24 fade-in fade-delay-2">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {BENEFITS.map((benefit) => (
             <div
@@ -118,10 +118,10 @@ export default function HomePage() {
       </section>
 
       {/* Gold decorative line */}
-      <div className="gold-line max-w-xs mx-auto" />
+      <div className="gold-line max-w-xs mx-auto fade-in fade-delay-3" />
 
       {/* Featured Products */}
-      <section className="max-w-[1280px] mx-auto px-6 py-20 md:py-24">
+      <section className="max-w-[1280px] mx-auto px-6 py-20 md:py-24 fade-in fade-delay-3">
         <div className="text-center mb-14 space-y-3">
           <h2 className="font-heading text-3xl md:text-4xl text-text-primary">
             Nossos Perfumes

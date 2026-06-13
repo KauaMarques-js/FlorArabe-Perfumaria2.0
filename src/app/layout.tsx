@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import PageFade from "@/components/shared/PageFade";
 import "./globals.css";
 
 const playfairDisplay = Playfair_Display({
@@ -52,7 +53,11 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen flex flex-col bg-background text-text-primary">
         <Header />
-        <main className="flex-1">{children}</main>
+        <main className="flex-1">
+          <PageFade className="min-h-screen" delay={60}>
+            {children}
+          </PageFade>
+        </main>
         <Footer />
       </body>
     </html>

@@ -1,6 +1,55 @@
 import { Product } from "@/types/product";
 
 export const products: Product[] = [
+ 
+  {
+    id: "Mayar-lattafa",
+    name: "Mayar Lattafa",
+    price: 199.90,
+    image: "/images/products/mayar-lattafa-normal.jpg",
+    images: ["/images/products/mayar-lattafa-normal.jpg", "/images/products/mayar-lattafa-normal-tabela.jpeg"],
+    description:
+      `O perfume árabe feminino que conquista pela elegância e cremosidade.
+
+Delicado, sofisticado e envolvente, o Yara Moi é perfeito para quem busca uma fragrância feminina marcante, confortável e extremamente elegante.
+
+Sua combinação de flores brancas, baunilha cremosa, notas gourmand e musk cria um aroma aveludado, luxuoso e irresistivelmente feminino.
+
+É aquele perfume que transmite sofisticação sem esforço, recebe elogios e deixa uma impressão memorável por onde passa. ✨
+
+🌷 Família Olfativa
+
+Floral Gourmand Cremoso
+
+✨ Notas em destaque
+
+* Flores brancas delicadas
+* Baunilha cremosa
+* Caramelo suave
+* Musk aveludado
+* Acordes gourmand sofisticados
+
+💖 Ideal para
+
+✔️ Uso diário
+✔️ Trabalho
+✔️ Encontros especiais
+✔️ Passeios
+✔️ Mulheres que amam perfumes doces, elegantes e sofisticados
+
+🛍️ Disponível em:
+
+🤍 Frasco Original 100ml
+✨ R$ 199,90
+
+🤍 Decant 10ml
+✨ R$ 34,90
+
+🤍 Kit Descoberta
+✨ 3 Decants de 10ml por R$ 99,90
+
+Perfeito para conhecer a fragrância antes de investir no frasco completo ou experimentar diferentes perfumes da coleção.`,
+  },
   {
     id: "Mayar-Natural-Intense-Lattafa",
     name: "Mayar Lattafa Natural Intense",
@@ -93,6 +142,7 @@ Floral Frutado Gourmand
 
 Perfeito para conhecer a fragrância antes de investir no frasco completo ou experimentar diferentes perfumes da coleção.`,
   },
+  
   {
     id: "yara-lattafa-candy",
     name: "Yara Lattafa Candy",

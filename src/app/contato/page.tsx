@@ -16,7 +16,7 @@ const CONTACT_CHANNELS = [
       </svg>
     ),
     label: "WhatsApp",
-    description: "Canal principal de atendimento",
+    description: "Seu canal direto para atendimento e pedidos.",
     href: generateWhatsAppGeneralLink(),
     action: "Iniciar conversa",
     external: true,
@@ -30,11 +30,26 @@ const CONTACT_CHANNELS = [
       </svg>
     ),
     label: "Instagram",
-    description: "@florarabe.perfumaria",
-    href: "https://instagram.com/florarabe.perfumaria",
+    description: `@florarabe.perfumaria 
+    | Inspire-se com nossas novidades e coleções`,
+    href: `https://instagram.com/florarabe.perfumaria`,
     action: "Seguir no Instagram",
     external: true,
   },
+  {
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+        <circle cx="12" cy="10" r="3" />
+      </svg>
+    ),
+    label: "Entregas em Cuiabá e Região",
+    description: "Operação totalmente online, com praticidade e segurança. Não possuímos loja física.",
+    href: "",
+    action: "Envio Imediato",
+    external: false,
+  },
+  
 ];
 
 export default function ContatoPage() {
@@ -45,45 +60,52 @@ export default function ContatoPage() {
           Fale Conosco
         </h1>
         <p className="text-text-secondary text-sm md:text-base font-light tracking-wide">
-          Estamos prontos para ajudar você a encontrar a fragrância perfeita
+          Descubra a fragrância que combina com sua essência. Nossa equipe está pronta para oferecer um atendimento exclusivo e auxiliar na escolha do perfume perfeito.
         </p>
         <div className="gold-line max-w-16 mx-auto mt-4" />
       </div>
 
       <div className="space-y-4">
-        {CONTACT_CHANNELS.map((channel, idx) => (
-          <Link
-            key={channel.label}
-            href={channel.href}
-            target={channel.external ? "_blank" : undefined}
-            rel={channel.external ? "noopener noreferrer" : undefined}
-            className={`group flex items-center gap-5 p-5 bg-surface rounded-2xl border border-border/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-gold/5 hover:border-gold/30 fade-in fade-delay-${Math.min(4, idx + 1)}`}
-          >
-            <div className="text-gold shrink-0 transition-transform duration-300 group-hover:scale-110">{channel.icon}</div>
+        {CONTACT_CHANNELS.map((channel, idx) => {
+          const content = (
+            <>
+              <div className="text-gold shrink-0 transition-transform duration-300 group-hover:scale-110">{channel.icon}</div>
 
-            <div className="flex-1 min-w-0">
-              <h2 className="font-heading text-base md:text-lg text-text-primary group-hover:text-gold transition-colors duration-300">
-                {channel.label}
-              </h2>
-              <p className="text-xs md:text-sm text-text-secondary font-light">{channel.description}</p>
+              <div className="flex-1 min-w-0">
+                <h2 className="font-heading text-base md:text-lg text-text-primary group-hover:text-gold transition-colors duration-300">
+                  {channel.label}
+                </h2>
+                <p className="text-xs md:text-sm text-text-secondary font-light">{channel.description}</p>
+              </div>
+
+              <span className="hidden sm:inline-flex text-[10px] md:text-xs tracking-widest uppercase text-text-secondary group-hover:text-gold transition-colors duration-300">
+                {channel.action}
+              </span>
+            </>
+          );
+
+          const className = `group flex items-center gap-5 p-5 bg-surface rounded-2xl border border-border/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-gold/5 hover:border-gold/30 fade-in fade-delay-${Math.min(4, idx + 1)}`;
+
+          if (channel.href) {
+            return (
+              <Link
+                key={channel.label}
+                href={channel.href}
+                target={channel.external ? "_blank" : undefined}
+                rel={channel.external ? "noopener noreferrer" : undefined}
+                className={className}
+              >
+                {content}
+              </Link>
+            );
+          }
+
+          return (
+            <div key={channel.label} className={className}>
+              {content}
             </div>
-
-            <span className="hidden sm:inline-flex text-[10px] md:text-xs tracking-widest uppercase text-text-secondary group-hover:text-gold transition-colors duration-300">
-              {channel.action}
-            </span>
-          </Link>
-        ))}
-      </div>
-
-      {/* Location */}
-      <div className="text-center mt-16 space-y-2">
-        <div className="gold-line max-w-16 mx-auto mb-8" />
-        <p className="text-sm text-text-secondary">
-          <span className="text-text-primary font-medium">Localização</span>
-        </p>
-        <p className="text-text-secondary text-sm">
-          Cuiabá — Mato Grosso
-        </p>
+          );
+        })}
       </div>
     </section>
   );

@@ -48,7 +48,8 @@ export default function ProductGallery({ images, alt }: ProductGalleryProps) {
                 fill
                 sizes="80px"
                 className="object-cover"
-                priority
+                priority={index === 0}
+                loading={index === 0 ? "eager" : "lazy"}
               />
             </button>
           ))}

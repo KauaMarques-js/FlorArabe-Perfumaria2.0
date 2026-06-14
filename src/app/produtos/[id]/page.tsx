@@ -24,14 +24,49 @@ export async function generateMetadata({
   const product = products.find((p) => p.id === id);
 
   if (!product) {
-    return { title: "Produto não encontrado" };
+    return { 
+      title: "Produto não encontrado | Flor Árabe Perfumaria",
+      description: "O produto solicitado não foi encontrado."
+    };
   }
+
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://florarabe.com.br";
+  const productUrl = `${baseUrl}/produtos/${product.id}`;
+  
+  // Short description for social media (max 155 chars)
+  const shortDescription = product.description
+    ? product.description.split('\n')[0].substring(0, 155)
+    : `${product.name} — perfume árabe original. ${formatPrice(product.price)}`;
 
   return {
     title: `${product.name} | Flor Árabe Perfumaria`,
-    description:
-      product.description ||
-      `${product.name} — perfume árabe original. Compre via WhatsApp.`,
+    description: shortDescription,
+    keywords: [product.name, "perfume árabe", "fragrância", "perfume original"],
+    
+    // Open Graph for social media sharing
+    openGraph: {
+      type: "article",
+      url: productUrl,
+      title: `${product.name} | Flor Árabe Perfumaria`,
+      description: shortDescription,
+      images: [
+        {
+          url: `${baseUrl}${product.image}`,
+          width: 1200,
+          height: 1500,
+          alt: product.name,
+        },
+      ],
+      siteName: "Flor Árabe Perfumaria",
+    },
+
+    // Twitter Card for Twitter sharing
+    twitter: {
+      card: "summary_large_image",
+      title: `${product.name} | Flor Árabe Perfumaria`,
+      description: shortDescription,
+      images: [`${baseUrl}${product.image}`],
+    },
   };
 }
 

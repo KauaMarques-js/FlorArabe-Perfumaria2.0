@@ -39,36 +39,36 @@ const CONTACT_CHANNELS = [
 
 export default function ContatoPage() {
   return (
-    <section className="max-w-[720px] mx-auto px-6 py-16 md:py-24 fade-in fade-delay-1">
-      <div className="text-center mb-14 space-y-3">
+    <section className="max-w-[600px] mx-auto px-6 py-12 md:py-20 fade-in fade-delay-1">
+      <div className="text-center mb-10 space-y-3">
         <h1 className="font-heading text-3xl md:text-4xl text-text-primary">
           Fale Conosco
         </h1>
-        <p className="text-text-secondary text-sm tracking-wide">
+        <p className="text-text-secondary text-sm md:text-base font-light tracking-wide">
           Estamos prontos para ajudar você a encontrar a fragrância perfeita
         </p>
-        <div className="gold-line max-w-24 mx-auto mt-4" />
+        <div className="gold-line max-w-16 mx-auto mt-4" />
       </div>
 
-      <div className="space-y-6">
+      <div className="space-y-4">
         {CONTACT_CHANNELS.map((channel, idx) => (
           <Link
             key={channel.label}
             href={channel.href}
             target={channel.external ? "_blank" : undefined}
             rel={channel.external ? "noopener noreferrer" : undefined}
-            className={`group flex items-center gap-6 p-6 bg-surface rounded-2xl border border-border/30 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md hover:shadow-black/5 hover:border-border/60 fade-in fade-delay-${Math.min(4, idx + 1)}`}
+            className={`group flex items-center gap-5 p-5 bg-surface rounded-2xl border border-border/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-gold/5 hover:border-gold/30 fade-in fade-delay-${Math.min(4, idx + 1)}`}
           >
-            <div className="text-gold shrink-0">{channel.icon}</div>
+            <div className="text-gold shrink-0 transition-transform duration-300 group-hover:scale-110">{channel.icon}</div>
 
             <div className="flex-1 min-w-0">
-              <h2 className="font-heading text-lg text-text-primary">
+              <h2 className="font-heading text-base md:text-lg text-text-primary group-hover:text-gold transition-colors duration-300">
                 {channel.label}
               </h2>
-              <p className="text-sm text-text-secondary">{channel.description}</p>
+              <p className="text-xs md:text-sm text-text-secondary font-light">{channel.description}</p>
             </div>
 
-            <span className="hidden sm:inline-flex text-xs tracking-widest uppercase text-text-secondary group-hover:text-gold transition-colors duration-200">
+            <span className="hidden sm:inline-flex text-[10px] md:text-xs tracking-widest uppercase text-text-secondary group-hover:text-gold transition-colors duration-300">
               {channel.action}
             </span>
           </Link>

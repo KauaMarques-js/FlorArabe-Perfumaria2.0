@@ -5,4 +5,6 @@ export type Product = {
   image: string;
   images?: string[];
   description?: string;
+  olfactoryFamily?: string;
+  gender?: 'Feminino' | 'Masculino' | 'Unissex' | 'Compartilhável';
 };

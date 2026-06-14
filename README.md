@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌺 Flor Árabe Perfumaria
 
-## Getting Started
+Este é o repositório oficial da **Flor Árabe Perfumaria**, um catálogo digital focado na conversão direta via WhatsApp, projetado com uma experiência visual de altíssimo luxo.
 
-First, run the development server:
+## 📌 Visão Geral do Projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+O projeto não é um e-commerce tradicional (não possui carrinho de compras, checkout ou banco de dados próprio na fase atual). Ele opera como um **Catálogo Estático / Landing Page Premium** de alta performance. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+O foco absoluto é **UI/UX de Luxo** (Design Premium, Dark Mode sofisticado) e **Conversão (CRO)**. O usuário escolhe o produto e é imediatamente redirecionado ao WhatsApp com uma mensagem pré-formatada.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🏗️ Arquitetura e Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+A arquitetura foi pensada para ser *frontend-first*, veloz e com baixo custo de manutenção:
+- **Framework**: [Next.js (App Router)](https://nextjs.org/)
+- **Linguagem**: TypeScript
+- **Estilização**: Tailwind CSS (com variáveis customizadas para temas de luxo)
+- **Data Layer**: Dados estáticos centralizados em `src/data/products.ts` (sem backend)
+- **Integração Externa**: Click-to-Chat do WhatsApp
 
-## Learn More
+## 💎 A Transformação Premium (O que foi construído)
 
-To learn more about Next.js, take a look at the following resources:
+Ao longo do desenvolvimento, o projeto evoluiu para um padrão de marcas de luxo através de várias implementações técnicas:
+1. **Design System de Alto Padrão**: 
+   - Tema *Dark Mode* reestruturado com foco num dourado "Ouro Envelhecido" (`#B89B62`), reduzindo o cansaço visual.
+   - Microinterações responsivas baseadas em curvas de bezier luxuosas (`cubic-bezier`).
+   - Imagens de produtos recebem ajustes finos no modo noturno para não "estourar" o brilho.
+2. **Experiência do Usuário (UX) & Conversão (CRO)**:
+   - Os cards de produto possuem tags de **Família Olfativa** e **Gênero** para reduzir a barreira de compra de perfumes pela internet.
+   - A hierarquia visual foca sempre: 1. A Promessa (Headline) -> 2. O Preço -> 3. Contato via WhatsApp.
+3. **Clean Code e SOLID**:
+   - Componentização rigorosa dividida em `product/`, `home/`, `layout/` e `shared/`.
+   - Tipos de dados centralizados (`Product` em `src/types/product.ts`).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Como Começar (Ambiente de Desenvolvimento)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Para rodar este projeto em sua máquina local, certifique-se de ter o Node.js instalado.
 
-## Deploy on Vercel
+1. **Clone o repositório** e acesse a pasta do projeto.
+2. **Instale as dependências**:
+   ```bash
+   npm install
+   ```
+3. **Inicie o servidor de desenvolvimento**:
+   ```bash
+   npm run dev
+   ```
+4. **Abra no navegador**:
+   Acesse [http://localhost:3000](http://localhost:3000)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📁 Estrutura de Pastas Principal
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `/src/app` -> Páginas do Next.js (Home, Produtos, Contato).
+- `/src/components` -> Componentes de UI modulares.
+- `/src/data` -> O "Banco de Dados" atual (arquivo `products.ts`).
+- `/src/styles` -> Estilos globais e tokens de cores (`globals.css`).
+- `/DOCS` -> Documentação detalhada original (Regras de Negócio, Casos de Uso).
+
+## 🛡️ Licença
+
+Este é um software de código fechado. **Nenhuma cópia, modificação ou distribuição é permitida**. Consulte o arquivo `LICENSE` na raiz do projeto para obter detalhes.
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido e arquitetado por **Kauã Marques Almeida**  
+🔗 GitHub: [@KauaMarques-js](https://github.com/KauaMarques-js)

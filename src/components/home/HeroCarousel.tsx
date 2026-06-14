@@ -58,7 +58,7 @@ export default function HeroCarousel({ products }: HeroCarouselProps) {
   }, [currentIndex]);
 
   return (
-    <div className="relative w-72 h-96 md:w-80 md:h-[28rem] lg:w-96 lg:h-[32rem] group flex flex-col items-center">
+    <div className="relative w-64 h-[22rem] md:w-72 md:h-[26rem] lg:w-80 lg:h-[28rem] group flex flex-col items-center mx-auto">
       {/* Slider Container */}
       <div
         onTouchStart={handleTouchStart}
@@ -92,19 +92,19 @@ export default function HeroCarousel({ products }: HeroCarouselProps) {
 
         {/* Floating Product Info Badge */}
         <div
-          className={`absolute bottom-6 left-1/2 -translate-x-1/2 bg-surface-elevated/90 backdrop-blur-md px-4 py-2.5 rounded-full border border-border/40 shadow-sm hover:bg-surface-elevated flex items-center gap-3 z-10 transition-colors duration-300${
+          className={`absolute bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-max bg-surface-elevated/90 backdrop-blur-md px-4 py-2.5 rounded-full border border-border/40 shadow-sm hover:bg-surface-elevated flex items-center justify-center z-10 transition-colors duration-300${
             badgeAnimate ? " carousel-badge-enter" : ""
           }`}
         >
           <Link
             href={`/produtos/${products[currentIndex].id}`}
-            className="flex items-center gap-2"
+            className="flex items-center justify-center gap-2 w-full overflow-hidden"
           >
-            <span className="text-xs font-semibold tracking-wide text-text-primary whitespace-nowrap">
+            <span className="text-xs font-semibold tracking-wide text-text-primary truncate">
               {products[currentIndex].name}
             </span>
-            <span className="w-1.5 h-1.5 rounded-full bg-gold/60" />
-            <span className="text-xs font-medium text-gold font-sans whitespace-nowrap">
+            <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-gold/60 shrink-0" />
+            <span className="text-xs font-medium text-gold font-sans whitespace-nowrap shrink-0">
               {formatPrice(products[currentIndex].price)}
             </span>
           </Link>

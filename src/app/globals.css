@@ -22,8 +22,8 @@ html.dark {
   --color-background: #181613;
   --color-surface: #211E1A;
   --color-surface-elevated: #2A2621;
-  --color-gold: #D4B06A;
-  --color-gold-hover: #E0BE7E;
+  --color-gold: #B89B62;
+  --color-gold-hover: #A08450;
   --color-text-primary: #F5F1EA;
   --color-text-secondary: #B6ADA1;
   --color-border: #3A342D;
@@ -45,8 +45,8 @@ body {
 *::before,
 *::after {
   transition-property: background-color, border-color, color, fill, stroke, box-shadow;
-  transition-duration: 300ms;
-  transition-timing-function: ease;
+  transition-duration: 400ms;
+  transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 /* Exclude elements that need instant response or have their own transitions */
@@ -85,6 +85,14 @@ video,
 
 .product-image-wrapper:hover img {
   transform: scale(1.02);
+}
+
+html.dark .product-image-wrapper img {
+  filter: brightness(0.92);
+}
+
+html.dark .product-image-wrapper:hover img {
+  filter: brightness(1);
 }
 
 /* ── Carousel badge entrance animation ── */

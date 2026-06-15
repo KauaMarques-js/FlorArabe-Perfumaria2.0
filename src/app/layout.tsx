@@ -3,6 +3,7 @@ import { Playfair_Display, Inter } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import PageFade from "@/components/shared/PageFade";
+import PromotionBanner from "@/components/promotion/PromotionBanner";
 import "./globals.css";
 
 const playfairDisplay = Playfair_Display({
@@ -52,6 +53,7 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className="min-h-screen flex flex-col bg-background text-text-primary">
+        <PromotionBanner />
         <Header />
         <main className="flex-1">
           <PageFade className="min-h-screen" delay={60}>

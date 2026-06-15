@@ -4,7 +4,9 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Product } from "@/types/product";
+import { getProductPromotion } from "@/lib/promotion";
 import { formatPrice } from "@/lib/format";
+import DiscountBadge from "@/components/promotion/DiscountBadge";
 
 type HeroCarouselProps = {
   products: Product[];
@@ -68,6 +70,8 @@ export default function HeroCarousel({ products }: HeroCarouselProps) {
       >
         {products.map((product, index) => {
           const isActive = index === currentIndex;
+          const promotion = getProductPromotion(product);
+
           return (
             <Link
               key={product.id}
@@ -78,6 +82,12 @@ export default function HeroCarousel({ products }: HeroCarouselProps) {
                   : "opacity-0 scale-95 translate-x-4 pointer-events-none"
               }`}
             >
+              {promotion && (
+                <DiscountBadge
+                  discountPercentage={promotion.discountPercentage}
+                  label={promotion.label}
+                />
+              )}
               <Image
                 src={product.image}
                 alt={product.name}

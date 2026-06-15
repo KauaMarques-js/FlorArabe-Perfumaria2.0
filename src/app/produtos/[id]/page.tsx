@@ -4,6 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { products } from "@/data/products";
 import { formatPrice } from "@/lib/format";
+import { getProductPromotion, getPromotionSummary } from "@/lib/promotion";
+import PromotionPrice from "@/components/promotion/PromotionPrice";
 import WhatsAppButton from "@/components/shared/WhatsAppButton";
 import ProductGallery from "@/components/product/ProductGallery";
 
@@ -78,6 +80,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
     notFound();
   }
 
+  const promotion = getProductPromotion(product);
+  const summary = getPromotionSummary(product, promotion);
+
   return (
     <section className="max-w-[1280px] mx-auto px-6 py-12 md:py-20">
       {/* Breadcrumb */}
@@ -138,9 +143,13 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
             <div className="gold-line max-w-16" />
 
-            <p className="text-gold text-2xl font-medium">
-              {formatPrice(product.price)}
-            </p>
+            {summary ? (
+              <PromotionPrice promotion={summary} />
+            ) : (
+              <p className="text-gold text-2xl font-medium">
+                {formatPrice(product.price)}
+              </p>
+            )}
           </div>
 
           {product.description && (

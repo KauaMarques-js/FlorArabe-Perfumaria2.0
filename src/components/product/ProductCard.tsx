@@ -18,14 +18,6 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
 
   return (
     <article className="group relative h-full flex flex-col bg-surface rounded-2xl overflow-hidden border border-border/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-gold/5 hover:border-gold/30">
-      <Link
-        href={`/produtos/${product.id}`}
-        aria-label={`Ver produto ${product.name}`}
-        className="absolute inset-0 z-10 rounded-2xl"
-      >
-        <span className="sr-only">Ver produto {product.name}</span>
-      </Link>
-
       <div className="product-image-wrapper aspect-[3/4] relative bg-background shrink-0">
         {promotion && (
           <DiscountBadge
@@ -45,29 +37,37 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
       </div>
 
       <div className="p-3 xs:p-4 sm:p-5 flex flex-col flex-1">
-        <div>
-          <h3 className="font-heading text-sm xs:text-base sm:text-lg text-text-primary leading-snug line-clamp-2 transition-colors duration-300 group-hover:text-gold">
-            {product.name}
-          </h3>
+        <Link
+          href={`/produtos/${product.id}`}
+          aria-label={`Ver produto ${product.name}`}
+          className="no-underline group block"
+        >
+          <div>
+            <h3 className="font-heading text-sm xs:text-base sm:text-lg text-text-primary leading-snug line-clamp-2 transition-colors duration-300 group-hover:text-gold">
+              {product.name}
+            </h3>
 
-          {(product.olfactoryFamily || product.gender) && (
-            <div className="mt-1.5 flex flex-wrap items-center gap-1.5 text-[10px] uppercase tracking-widest text-text-secondary/80 font-medium">
-              {product.olfactoryFamily && <span>{product.olfactoryFamily}</span>}
-              {product.olfactoryFamily && product.gender && <span className="w-1 h-1 rounded-full bg-border"></span>}
-              {product.gender && <span>{product.gender}</span>}
-            </div>
-          )}
-        </div>
+            {(product.olfactoryFamily || product.gender) && (
+              <div className="mt-1.5 flex flex-wrap items-center gap-1.5 text-[10px] uppercase tracking-widest text-text-secondary/80 font-medium">
+                {product.olfactoryFamily && <span>{product.olfactoryFamily}</span>}
+                {product.olfactoryFamily && product.gender && <span className="w-1 h-1 rounded-full bg-border"></span>}
+                {product.gender && <span>{product.gender}</span>}
+              </div>
+            )}
+          </div>
 
-        <div className="mt-auto pt-4 relative z-20">
-          {summary ? (
-            <PromotionPrice promotion={summary} />
-          ) : (
-            <p className="text-gold font-medium text-xs xs:text-sm sm:text-base tracking-wide mb-3">
-              {formatPrice(product.price)}
-            </p>
-          )}
+          <div className="mt-auto pt-4">
+            {summary ? (
+              <PromotionPrice promotion={summary} />
+            ) : (
+              <p className="text-gold font-medium text-xs xs:text-sm sm:text-base tracking-wide mb-3">
+                {formatPrice(product.price)}
+              </p>
+            )}
+          </div>
+        </Link>
 
+        <div className="mt-3">
           <WhatsAppButton
             productName={product.name}
             variant="outline"

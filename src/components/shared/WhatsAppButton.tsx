@@ -17,7 +17,7 @@ export default function WhatsAppButton({
   const href = generateWhatsAppLink(productName);
 
   const baseStyles =
-    "inline-flex items-center justify-center gap-1.5 sm:gap-2 rounded-full px-4 py-2 sm:px-6 sm:py-3 text-xs sm:text-sm font-medium tracking-wide transition-all duration-200 cursor-pointer";
+    "inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full px-5 py-3 sm:px-6 sm:py-3 text-sm sm:text-base font-medium tracking-wide transition-all duration-200 cursor-pointer";
 
   const variants = {
     primary:

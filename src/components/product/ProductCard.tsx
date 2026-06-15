@@ -20,8 +20,13 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
     <article className="group relative h-full flex flex-col bg-surface rounded-2xl overflow-hidden border border-border/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-gold/5 hover:border-gold/30">
       <Link
         href={`/produtos/${product.id}`}
-        className="block product-image-wrapper aspect-[3/4] relative bg-background shrink-0"
+        aria-label={`Ver produto ${product.name}`}
+        className="absolute inset-0 z-10 rounded-2xl"
       >
+        <span className="sr-only">Ver produto {product.name}</span>
+      </Link>
+
+      <div className="product-image-wrapper aspect-[3/4] relative bg-background shrink-0">
         {promotion && (
           <DiscountBadge
             label={promotion.label}
@@ -37,15 +42,13 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
           className="object-cover object-center"
           priority={priority}
         />
-      </Link>
+      </div>
 
       <div className="p-3 xs:p-4 sm:p-5 flex flex-col flex-1">
         <div>
-          <Link href={`/produtos/${product.id}`} className="block group/link">
-            <h3 className="font-heading text-sm xs:text-base sm:text-lg text-text-primary leading-snug line-clamp-2 group-hover/link:text-gold transition-colors duration-300">
-              {product.name}
-            </h3>
-          </Link>
+          <h3 className="font-heading text-sm xs:text-base sm:text-lg text-text-primary leading-snug line-clamp-2 transition-colors duration-300 group-hover:text-gold">
+            {product.name}
+          </h3>
 
           {(product.olfactoryFamily || product.gender) && (
             <div className="mt-1.5 flex flex-wrap items-center gap-1.5 text-[10px] uppercase tracking-widest text-text-secondary/80 font-medium">
@@ -56,7 +59,7 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
           )}
         </div>
 
-        <div className="mt-auto pt-4">
+        <div className="mt-auto pt-4 relative z-20">
           {summary ? (
             <PromotionPrice promotion={summary} />
           ) : (
@@ -69,7 +72,7 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
             productName={product.name}
             variant="outline"
             label="Comprar"
-            className="w-full"
+            className="w-full relative z-20"
           />
         </div>
       </div>

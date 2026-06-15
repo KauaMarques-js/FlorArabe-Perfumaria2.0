@@ -6,7 +6,7 @@ type DiscountBadgeProps = {
 export default function DiscountBadge({ label, discountPercentage }: DiscountBadgeProps) {
   const displayText =
     label ??
-    (discountPercentage ? `Economize ${discountPercentage}%` : "");
+    (discountPercentage ? `${discountPercentage}% OFF` : "");
 
   if (!displayText) {
     return null;

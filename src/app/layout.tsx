@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Playfair_Display, Inter } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -50,9 +51,13 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <Script
+          id="theme-script"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: themeScript }}
+        />
       </head>
-      <body className="min-h-screen flex flex-col bg-background text-text-primary">
+      <body suppressHydrationWarning className="min-h-screen flex flex-col bg-background text-text-primary">
         <PromotionBanner />
         <Header />
         <main className="flex-1">

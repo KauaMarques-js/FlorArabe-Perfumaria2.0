@@ -40,7 +40,7 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
         <Link
           href={`/produtos/${product.id}`}
           aria-label={`Ver produto ${product.name}`}
-          className="no-underline group block"
+          className="no-underline group block flex-1 flex flex-col"
         >
           <div>
             <h3 className="font-heading text-sm xs:text-base sm:text-lg text-text-primary leading-snug line-clamp-2 transition-colors duration-300 group-hover:text-gold">

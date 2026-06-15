@@ -16,3 +16,8 @@ export type Product = {
   gender?: 'Feminino' | 'Masculino' | 'Unissex' | 'Compartilhável';
   promotion?: ProductPromotion;
 };
+
+export type ProductSummary = Pick<
+  Product,
+  'id' | 'name' | 'price' | 'originalPrice' | 'image' | 'olfactoryFamily' | 'gender'
+>;

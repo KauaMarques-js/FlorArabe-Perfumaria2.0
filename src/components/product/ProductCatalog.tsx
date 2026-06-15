@@ -1,11 +1,11 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { Product } from "@/types/product";
+import type { ProductSummary } from "@/types/product";
 import ProductGrid from "./ProductGrid";
 
 type ProductCatalogProps = {
-  products: Product[];
+  products: ProductSummary[];
 };
 
 export default function ProductCatalog({ products }: ProductCatalogProps) {

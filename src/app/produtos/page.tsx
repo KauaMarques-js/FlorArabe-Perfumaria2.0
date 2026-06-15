@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { products } from "@/data/products";
 import ProductCatalog from "@/components/product/ProductCatalog";
+import type { ProductSummary } from "@/types/product";
 
 export const metadata: Metadata = {
   title: "Catálogo | Flor Árabe Perfumaria",
@@ -9,6 +10,16 @@ export const metadata: Metadata = {
 };
 
 export default function ProdutosPage() {
+  const summaries: ProductSummary[] = products.map((p) => ({
+    id: p.id,
+    name: p.name,
+    price: p.price,
+    originalPrice: p.originalPrice,
+    image: p.image,
+    olfactoryFamily: p.olfactoryFamily,
+    gender: p.gender,
+  }));
+
   return (
     <section className="max-w-[1280px] mx-auto px-6 py-16 md:py-24">
       <div className="text-center mb-14 space-y-3">
@@ -21,7 +32,7 @@ export default function ProdutosPage() {
         <div className="gold-line max-w-24 mx-auto mt-4" />
       </div>
 
-      <ProductCatalog products={products} />
+      <ProductCatalog products={summaries} />
     </section>
   );
 }

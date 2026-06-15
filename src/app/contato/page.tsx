@@ -84,7 +84,7 @@ export default function ContatoPage() {
             </>
           );
 
-          const className = `group flex items-center gap-5 p-5 bg-surface rounded-2xl border border-border/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-gold/5 hover:border-gold/30 fade-in fade-delay-${Math.min(4, idx + 1)}`;
+          const className = `group cursor-pointer flex items-center gap-5 p-5 bg-surface rounded-2xl border border-border/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-gold/5 hover:border-gold/30 fade-in fade-delay-${Math.min(4, idx + 1)}`;
 
           if (channel.href) {
             return (

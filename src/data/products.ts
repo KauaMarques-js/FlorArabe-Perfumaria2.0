@@ -333,7 +333,7 @@ Perfeito para conhecer a fragrância antes de investir no frasco completo ou exp
     olfactoryFamily: "Floral Frutado Sofisticado",
     gender: "Feminino",
     image: "/images/products/haya-lattafa.jpg",
-    images: ["/images/products/haya-lattafa.jpg", "/images/products/haya-lattafa-tabela.jpeg"],
+    images: ["/images/products/haya-lattafa.jpg", "/images/products/Haya-lattafa-tabela.jpeg"],
     description: `A fragrância árabe que transmite delicadeza, elegância e feminilidade em cada detalhe.
 
 Haya by Lattafa é um perfume sofisticado e envolvente, criado para quem ama fragrâncias elegantes, modernas e extremamente marcantes. Sua composição combina notas florais delicadas, acordes frutados vibrantes e um fundo cremoso sofisticado, criando uma experiência olfativa luxuosa e inesquecível. ✨

@@ -18,23 +18,29 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
 
   return (
     <article className="group relative h-full flex flex-col bg-surface rounded-2xl overflow-hidden border border-border/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-gold/5 hover:border-gold/30">
-      <div className="product-image-wrapper aspect-[3/4] relative bg-background shrink-0">
-        {promotion && (
-          <DiscountBadge
-            label={promotion.label}
-            discountPercentage={promotion.discountPercentage}
-          />
-        )}
+      <Link
+        href={`/produtos/${product.id}`}
+        aria-label={`Ver produto ${product.name}`}
+        className="no-underline"
+      >
+        <div className="product-image-wrapper aspect-[3/4] relative bg-background shrink-0 cursor-pointer">
+          {promotion && (
+            <DiscountBadge
+              label={promotion.label}
+              discountPercentage={promotion.discountPercentage}
+            />
+          )}
 
-        <Image
-          src={product.image}
-          alt={product.name}
-          fill
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-          className="object-cover object-center"
-          priority={priority}
-        />
-      </div>
+          <Image
+            src={product.image}
+            alt={product.name}
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            className="object-cover object-center"
+            priority={priority}
+          />
+        </div>
+      </Link>
 
       <div className="p-3 xs:p-4 sm:p-5 flex flex-col flex-1">
         <Link

@@ -5,8 +5,7 @@ export const products: Product[] = [
   {
     id: "Asad-lattafa",
     name: "Asad Lattafa",
-    price: 220.0,
-    originalPrice: 275.0,
+    price: 329.90,
     olfactoryFamily: "Âmbar Especiado",
     gender: "Masculino",
     image: "/images/products/asad-lattafa.jpeg",
@@ -71,8 +70,7 @@ Onde cada fragrância conta uma história. ✨`,
   {
     id: "Mayar-lattafa",
     name: "Mayar Lattafa",
-    price: 219.90,
-    originalPrice: 274.88,
+    price: 249.90,
     olfactoryFamily: "Floral Frutado",
     gender: "Feminino",
     image: "/images/products/mayar-lattafa-normal.jpg",
@@ -127,7 +125,6 @@ Onde cada fragrância conta uma história. ✨`,
     id: "Mayar-Natural-Intense-Lattafa",
     name: "Mayar Lattafa Natural Intense",
     price: 219.90,
-    originalPrice: 274.88,
     olfactoryFamily: "Floral Aquático Frutado",
     gender: "Feminino",
     image: "/images/products/mayar-lattafa.jpg",
@@ -181,8 +178,7 @@ Onde cada fragrância conta uma história. ✨`,
   {
     id: "yara-lattafa",
     name: "Yara Lattafa",
-    price: 199.90,
-    originalPrice: 249.88,
+    price: 289.90,
     olfactoryFamily: "Floral Frutado Gourmand",
     gender: "Feminino",
     image: "/images/products/yara-lattafa.jpg",
@@ -226,7 +222,6 @@ Perfeito para conhecer a fragrância antes de investir no frasco completo ou exp
     id: "yara-lattafa-candy",
     name: "Yara Lattafa Candy",
     price: 199.90,
-    originalPrice: 249.88,
     olfactoryFamily: "Floral Frutado Gourmand",
     gender: "Feminino",
     image: "/images/products/yara-lattafa-candy.jpg",
@@ -277,8 +272,7 @@ Perfeito para conhecer a fragrância antes de investir no frasco completo ou exp
   {
     id: "yara-lattafa-moi",
     name: "Yara Lattafa Moi",
-    price: 199.90,
-    originalPrice: 249.88,
+    price: 269.90,
     olfactoryFamily: "Floral Gourmand Cremoso",
     gender: "Feminino",
     image: "/images/products/yara-lattafa-moi.jpg",
@@ -329,7 +323,6 @@ Perfeito para conhecer a fragrância antes de investir no frasco completo ou exp
     id: "haya-lattafa",
     name: "Haya Lattafa",
     price: 299.90,
-    originalPrice: 374.88,
     olfactoryFamily: "Floral Frutado Sofisticado",
     gender: "Feminino",
     image: "/images/products/haya-lattafa.jpg",
@@ -381,80 +374,11 @@ Notas de Fundo
 
 Perfeito para conhecer a fragrância antes de investir no frasco completo ou experimentar novas experiências olfativas da coleção.`,
   },
-  {
-    id: "khamrah-qahwa-lattafa",
-    name: "Khamrah Qahwa Lattafa",
-    price: 320.0,
-    originalPrice: 400.0,
-    olfactoryFamily: "Oriental Especiado Gourmand",
-    gender: "Unissex",
-    image: "/images/products/khamrah-qahwa-lattafa.jpg",
-    images: [
-      "/images/products/khamrah-qahwa-lattafa.jpg",
-      "/images/products/khamrah-qahwa-lattafa-tabela.jpeg",
-    ],
-    description: `O perfume árabe unissex que combina luxo, café intenso, sofisticação e uma assinatura olfativa absolutamente viciante.
-
-O Khamrah Qahwa by Lattafa é uma versão ainda mais intensa e envolvente da linha Khamrah, trazendo uma combinação irresistível de café encorpado, especiarias quentes, acordes gourmand sofisticados e madeiras nobres, criando uma fragrância marcante, elegante e extremamente sedutora.
-
-Seu aroma entrega uma experiência olfativa quente e sofisticada, perfeita para quem busca perfumes com personalidade forte, presença memorável e performance acima da média.
-
-Com excelente projeção e fixação prolongada, é aquele perfume que chama atenção, transmite luxo e deixa rastro por onde passa. ✨
-
-Ideal tanto para homens quanto mulheres que gostam de fragrâncias intensas e premium.
-
-🔥 Família Olfativa
-
-Oriental Especiado Gourmand
-
-✨ Notas em Destaque
-Notas de Topo
-
-* Canela
-* Cardamomo
-* Gengibre
-
-Notas de Corpo
-
-* Café
-* Pralinê
-* Frutas Cristalizadas
-
-Notas de Fundo
-
-* Baunilha
-* Fava Tonka
-* Benjoim
-* Musk
-* Madeira Âmbar
-
-☕ Ideal para quem busca
-
-✔️ Perfumes intensos, sofisticados e extremamente marcantes
-✔️ Fragrâncias com perfil quente e gourmand premium
-✔️ Excelente projeção e fixação prolongada
-✔️ Uso noturno e ocasiões especiais
-✔️ Perfumes unissex elegantes e diferenciados
-✔️ Aromas luxuosos com assinatura exclusiva
-
-🛍️ Disponível em
-
-🤎 Frasco Original 100ml
-✨ R$ 320,00
-
-🤎 Decant 10ml
-✨ R$ 49,90
-
-🤎 Kit Descoberta
-✨ 3 Decants de 10ml por R$ 129,90
-
-Perfeito para experimentar a fragrância antes de investir no frasco completo ou levar seu perfume favorito para qualquer lugar.`,
-  },
+  
   {
     id: "khamrah-lattafa",
     name: "Khamrah Lattafa",
-    price: 220.0,
-    originalPrice: 275.0,
+    price: 289.90,
     olfactoryFamily: "Oriental Especiado Gourmand",
     gender: "Unissex",
     image: "/images/products/khamrah-lattafa.jpg",
@@ -518,4 +442,134 @@ Notas de Fundo
 
 Ideal para conhecer a fragrância antes de investir no frasco completo ou experimentar diferentes perfumes da coleção.`,
   },
+  // {
+  //   id: "brand",
+  //   name: "Brand",
+  //   price: 89.90,
+  //   olfactoryFamily: "A definir",
+  //   gender: "Compartilhável",
+  //   image: "/images/products/brand.jpg",
+  //   images: ["/images/products/brand.jpg"],
+  //   description: "Produto a ser editado",
+  // },
+  // {
+  //   id: "safeer",
+  //   name: "Safeer",
+  //   price: 239.90,
+  //   olfactoryFamily: "A definir",
+  //   gender: "Compartilhável",
+  //   image: "/images/products/safeer.jpg",
+  //   images: ["/images/products/safeer.jpg"],
+  //   description: "Produto a ser editado",
+  // },
+  // {
+  //   id: "wazeer",
+  //   name: "Wazeer",
+  //   price: 239.90,
+  //   olfactoryFamily: "A definir",
+  //   gender: "Compartilhável",
+  //   image: "/images/products/wazeer.jpg",
+  //   images: ["/images/products/wazeer.jpg"],
+  //   description: "Produto a ser editado",
+  // },
+  // {
+  //   id: "ameer",
+  //   name: "Ameer",
+  //   price: 239.90,
+  //   olfactoryFamily: "A definir",
+  //   gender: "Compartilhável",
+  //   image: "/images/products/ameer.jpg",
+  //   images: ["/images/products/ameer.jpg"],
+  //   description: "Produto a ser editado",
+  // },
+  // {
+  //   id: "fakhar-gold",
+  //   name: "Fakhar Gold",
+  //   price: 249.90,
+  //   olfactoryFamily: "A definir",
+  //   gender: "Compartilhável",
+  //   image: "/images/products/fakhar-gold.jpg",
+  //   images: ["/images/products/fakhar-gold.jpg"],
+  //   description: "Produto a ser editado",
+  // },
+  // {
+  //   id: "bourbon",
+  //   name: "Bourbon",
+  //   price: 409.90,
+  //   olfactoryFamily: "A definir",
+  //   gender: "Compartilhável",
+  //   image: "/images/products/bourbon.jpg",
+  //   images: ["/images/products/bourbon.jpg"],
+  //   description: "Produto a ser editado",
+  // },
+  // {
+  //   id: "idaya",
+  //   name: "Idaya",
+  //   price: 349.90,
+  //   olfactoryFamily: "A definir",
+  //   gender: "Compartilhável",
+  //   image: "/images/products/idaya.jpg",
+  //   images: ["/images/products/idaya.jpg"],
+  //   description: "Produto a ser editado",
+  // },
+  // {
+  //   id: "daim",
+  //   name: "Daim",
+  //   price: 359.90,
+  //   olfactoryFamily: "A definir",
+  //   gender: "Compartilhável",
+  //   image: "/images/products/daim.jpg",
+  //   images: ["/images/products/daim.jpg"],
+  //   description: "Produto a ser editado",
+  // },
+  // {
+  //   id: "sublime",
+  //   name: "Sublime",
+  //   price: 299.90,
+  //   olfactoryFamily: "A definir",
+  //   gender: "Compartilhável",
+  //   image: "/images/products/sublime.jpg",
+  //   images: ["/images/products/sublime.jpg"],
+  //   description: "Produto a ser editado",
+  // },
+  // {
+  //   id: "nebras",
+  //   name: "Nebras",
+  //   price: 329.90,
+  //   olfactoryFamily: "A definir",
+  //   gender: "Compartilhável",
+  //   image: "/images/products/nebras.jpg",
+  //   images: ["/images/products/nebras.jpg"],
+  //   description: "Produto a ser editado",
+  // },
+  // {
+  //   id: "duha",
+  //   name: "Duha",
+  //   price: 239.90,
+  //   olfactoryFamily: "A definir",
+  //   gender: "Compartilhável",
+  //   image: "/images/products/duha.jpg",
+  //   images: ["/images/products/duha.jpg"],
+  //   description: "Produto a ser editado",
+  // },
+  // {
+  //   id: "yara-elixir",
+  //   name: "Yara Elixir",
+  //   price: 359.90,
+  //   olfactoryFamily: "A definir",
+  //   gender: "Compartilhável",
+  //   image: "/images/products/yara-elixir.jpg",
+  //   images: ["/images/products/yara-elixir.jpg"],
+  //   description: "Produto a ser editado",
+  // },
+  // {
+  //   id: "yara-tous",
+  //   name: "Yara Tous",
+  //   price: 269.90,
+  //   olfactoryFamily: "A definir",
+  //   gender: "Compartilhável",
+  //   image: "/images/products/yara-tous.jpg",
+  //   images: ["/images/products/yara-tous.jpg"],
+  //   description: "Produto a ser editado",
+  // },
 ];

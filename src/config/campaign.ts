@@ -8,7 +8,7 @@ export interface CampaignConfig {
 }
 
 export const CAMPAIGN: CampaignConfig = {
-  enabled: true,
+  enabled: false,
   discountPercentage: 20,
   buildVersion: process.env.NEXT_PUBLIC_CAMPAIGN_BUILD_VERSION ?? "1.0.0",
   title: "Inauguração Especial",
